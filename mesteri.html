@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon Tatuaje</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <img src="images/logo.png.png" alt="Logo salon" class="logo">
+    <div class="menu">
+      <a href="tatoo.html">Principal</a>
+      <a href="#section-2">Despre noi</a>
+      <a href="portofoliu.html">Portofoliu</a>
+      <a href="mesteri.html">Mesteri</a>
+      <a href="contacte.html">Contacte</a>
+    </div>
+    <div class="social-icon">
+      <a href="https://www.instagram.com/mad.art.tattoo/" target="_blank">
+        <img src="images/insta.png.png" alt="Instagram">
+      </a>
+    </div>
+  </nav>
+
+  <section class="portfolio-header">
+    <h1>Meșteri</h1>
+  </section>
+  <main>
+    <section class="artist-container">
+        <button class="arrow-button left-arrow" onclick="changeArtist('prev')">&#8592;</button>
+        
+        <div class="artist-profile">
+            <div class="image-container">
+                <img src="images/master1.png" alt="Alina Copăcescu" width="422" height="722">
+            </div>
+            <div class="details">
+                <h2>Alina Copăcescu</h2>
+                <p class="description">Transform ideile tale în opere de artă personalizate,
+                    lucrând cu pasiune și atenție la detalii. Experiența mea 
+                    în diverse stiluri garantează un tatuaj unic, adaptat
+                     perfect dorințelor tale. Alege calitatea și creativitatea 
+                    pentru o poveste scrisă pe pielea ta!</p>
+                <p class="experience">5 ani de experiență</p>
+                <div class="stars" onclick="rateExperience(event)">
+                    <span class="star">&#9734;</span>
+                    <span class="star">&#9734;</span>
+                    <span class="star">&#9734;</span>
+                    <span class="star">&#9734;</span>
+                    <span class="star">&#9734;</span>
+                </div>
+                <button class="schedule-button">Programează-te</button> <!-- Butonul -->
+            </div>
+        </div>
+        <div class="separator-line"></div>
+
+
+         <!-- Profilul artistului 2 -->
+         <div class="artist-profile">
+            <div class="image-container">
+                <img src="images/mester2.png" alt="Alt Mester" width="422" height="722">
+            </div>
+            <div class="details">
+                <h2>Cristi Bulat</h2>
+                <p class="description">Ofer o gamă variată de stiluri de tatuaje, fiecare realizat cu atenție și pasiune pentru detalii.</p>
+                <p class="experience">7 ani de experiență</p>
+                <div class="stars">
+                    <label for="star1" class="star">&#9734;</label>
+                    <label for="star2" class="star">&#9734;</label>
+                    <label for="star3" class="star">&#9734;</label>
+                    <label for="star4" class="star">&#9734;</label>
+                    <label for="star5" class="star">&#9734;</label>
+                </div>
+                <button class="schedule-button">Programează-te</button> <!-- Butonul -->
+            </div>
+        </div>
+
+      
+    </section>
+    <footer class="custom-footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="images/logo.png.png" alt="Logo" />
+          </div>
+      
+          <nav class="footer-nav">
+            <a href="tatoo.html">Principal</a>
+            <a href="#section-2">Despre noi</a>
+            <a href="portofoliu.html">Portofoliu</a> 
+            <a href="mesteri.html">Mesteri</a>
+            <a href="contacte.html">Contacte</a>
+          </nav>
+      
+          <div class="footer-info">
+            <div class="address">
+              <p>str. Decebal 91</p>
+              <p>+37369463052</p>
+            </div>
+            <div class="divider"></div>
+            <div class="address">
+              <p>str. Alba Iulia 91/1</p>
+              <p>+37365734950</p>
+            </div>
+          </div>
+      
+          <p class="footer-copy">&copy; 2024 Tatoo Lab</p>
+        </div>
+      
+        <div class="footer-icons">
+          <a href="#"><img src="images/insta.png.png" alt="Instagram" /></a>
+          <a href="#"><img src="images/iconita3.png" alt="Email" /></a>
+        </div>
+      </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,822 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Kelly Slab', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* un fundal închis, stil tattoo */
+    color: #fff;  
+     }     /* text alb pentru contrast */
+       .navbar {
+        position: fixed;
+        width: 100%;
+        height: 86px;
+        background-color: rgba(190, 178, 48, 1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 124px;
+        z-index: 1000; 
+      }
+  
+      .logo {
+        height: 40px; /* modifică după mărimea logo-ului tău */
+      }
+  
+      .menu {
+        display: flex;
+        gap: 40px;
+      }
+  
+      .menu a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .menu a:hover {
+        color: #fff;
+      }
+  
+      .social-icon img {
+        height: 24px;
+        width: 24px;
+        cursor: pointer;
+      }
+      .hero {
+        width: 100%;
+        height: calc(811px + 86px); /* sau cât dorești */
+        background-image: url('images/poza.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        padding-top: 86px; /* asigură-te că imaginea începe exact sub bara de meniu */
+        
+      }
+      
+      .hero::after {
+        margin-top: 86px;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+       
+        z-index: 1;
+      }
+      
+      .hero-content {
+        margin-tops: 190px;
+        z-index: 2;
+        color: #fff;
+        font-family: 'Kelly Slab', cursive;
+      }
+      
+      .hero h1 {
+        font-size: 128px;
+        font-weight: 200; 
+        margin-bottom: 20px;
+      }
+      
+      .hero p {
+        font-size: 24px;
+        margin-bottom: 36px;
+      
+      }
+      .hero-button {
+        display: inline-block;
+        width: 208px;
+        height: 50px;
+        line-height: 50px; /* centrează textul vertical */
+        text-align: center;
+        background-color: rgba(190, 178, 48, 1);
+        color: #000000;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 10px;
+        transition: background-color 0.3s, color 0.3s;
+        font-family: 'Kelly Slab', cursive;
+      }
+      
+      .hero-button:hover {
+        background-color: #fff;
+        color: #000000;
+      }
+
+      /* Stiluri pentru secțiunea 2 */
+.section-2 {
+    display: flex; /* Folosim Flexbox pentru a împărți secțiunea în două coloane */
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px; /* Un pic de padding pentru a evita lipirea de margini */
+    margin-top: 156px; /* Distanța de la marginea de jos a imaginii */
+  }
+  
+  .section-2 .left,
+  .section-2 .right {
+    width: 635px; /* Lățimea fiecărei coloane */
+  }
+  
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Container transparent */
+    font-size: 48px;
+    color:  rgba(190, 178, 48, 1); /* Text alb */
+    font-family: 'Kelly Slab', cursive;
+    margin-top: 116px;
+      text-align: center;
+  }
+  
+  .right {
+    color:  rgba(190, 178, 48, 1); /* Text alb */
+    font-family: 'Kelly Slab', cursive;
+    font-size: 24px;
+    line-height: 1.6;
+    padding: 20px;
+    margin-left: 40px; 
+    margin-bottom: 155px;
+    
+  }
+  .bottom-image {
+    width: 100%;
+    height: 354px; /* Asigură-te că imaginea își păstrează proporțiile */
+    display: block;
+    margin-top: 20px; /* Ajustează această valoare pentru a da un pic de spațiu între secțiune și imagine */
+  }
+ 
+
+
+ /* Titlu portofoliu */
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 10px; 
+}
+
+.portfolio-header h1 {
+    font-size: 48px;
+    color: rgba(190, 178, 48, 1);
+}
+
+/* Secțiunea de portofoliu */
+.portfolio-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px; /* <-- limitează lățimea */
+    margin: 0 auto; /* <-- centrează secțiunea */
+    padding: 20px;
+}
+
+/* Itemele individuale */
+.portfolio-item {
+    width: 210px;
+    height: 263px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.portfolio-item p {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.portfolio-item:hover {
+    background-color: rgba(190, 178, 48, 1);
+    border-color: rgba(190, 178, 48, 1);
+}
+
+.portfolio-item:hover p {
+    color: #fff;
+}
+.line {
+    width: 66.66%; /* 2/3 din lățimea ecranului */
+    height: 4px; /* grosimea liniei */
+    background-color: rgba(190, 178, 48, 1); /* Culoarea ca la bara de meniu */
+    margin-top: 40px; /* distanța față de ultimul rând de containere */
+    margin-left: auto; /* aliniază la dreapta */
+    margin-right: -180px; /* marginea dreaptă */
+}
+.portofoliu-containere {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 300px;
+    height: 200px;
+    background-color: #f5f5f5;
+    border: 2px solid #ede3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .container:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+  }
+  
+  .galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .galerie img {
+    width: 100%;
+    height: 250px; /* fixăm înălțimea */
+    object-fit: cover; /* taie imaginea frumos ca să umple spațiul */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+  
+  .galerie img:hover {
+    transform: scale(1.05);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Kelly Slab', cursive;
+    color: #ffffff; /* sau o culoare care să iasă în evidență */
+    margin-bottom: 100px;
+    padding-top: 100px; 
+  }
+  .artist-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+    position: relative;
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-arrow {
+    left: -40px;
+}
+
+.right-arrow {
+    right: -40px;
+}
+
+.artist-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 422px;
+    height: 722px;
+    margin-left:-124px;
+}
+
+.details {
+    max-width: 500px;
+}
+
+.details h2 {
+    font-size: 40px;
+    margin-left: 170px;
+}
+
+.description {
+    font-size: 24px;
+    margin-top: 48px;
+    margin-left: 100px;
+}
+
+.experience {
+    font-size: 36px;
+    margin-top: 48px;
+    margin-left: 160px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.arrow-buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.artist-profile {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Kelly Slab', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* un fundal închis, stil tattoo */
+    color: #fff;  
+     }     /* text alb pentru contrast */
+       .navbar {
+        position: fixed;
+        width: 100%;
+        height: 86px;
+        background-color: rgba(190, 178, 48, 1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 124px;
+        z-index: 1000; 
+      }
+  
+      .logo {
+        height: 40px; /* modifică după mărimea logo-ului tău */
+      }
+  
+      .menu {
+        display: flex;
+        gap: 40px;
+      }
+  
+      .menu a {
+        text-decoration: none;
+        color: #111;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .menu a:hover {
+        color: #fff;
+      }
+  
+      .social-icon img {
+        height: 24px;
+        width: 24px;
+        cursor: pointer;
+      }
+      .hero {
+        width: 100%;
+        height: calc(811px + 86px); /* sau cât dorești */
+        background-image: url('images/poza.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        padding-top: 86px; /* asigură-te că imaginea începe exact sub bara de meniu */
+        
+      }
+      
+      .hero::after {
+        margin-top: 86px;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+       
+        z-index: 1;
+      }
+      
+      .hero-content {
+        margin-tops: 190px;
+        z-index: 2;
+        color: #fff;
+        font-family: 'Kelly Slab', cursive;
+      }
+      
+      .hero h1 {
+        font-size: 128px;
+        font-weight: 200; 
+        margin-bottom: 20px;
+      }
+      
+      .hero p {
+        font-size: 24px;
+        margin-bottom: 36px;
+      
+      }
+      .hero-button {
+        display: inline-block;
+        width: 208px;
+        height: 50px;
+        line-height: 50px; /* centrează textul vertical */
+        text-align: center;
+        background-color: rgba(190, 178, 48, 1);
+        color: #000000;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 10px;
+        transition: background-color 0.3s, color 0.3s;
+        font-family: 'Kelly Slab', cursive;
+      }
+      
+      .hero-button:hover {
+        background-color: #fff;
+        color: #000000;
+      }
+
+      /* Stiluri pentru secțiunea 2 */
+.section-2 {
+    display: flex; /* Folosim Flexbox pentru a împărți secțiunea în două coloane */
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px; /* Un pic de padding pentru a evita lipirea de margini */
+    margin-top: 156px; /* Distanța de la marginea de jos a imaginii */
+  }
+  
+  .section-2 .left,
+  .section-2 .right {
+    width: 635px; /* Lățimea fiecărei coloane */
+  }
+  
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Container transparent */
+    font-size: 48px;
+    color:  rgba(190, 178, 48, 1); /* Text alb */
+    font-family: 'Kelly Slab', cursive;
+    margin-top: 116px;
+      text-align: center;
+  }
+  
+  .right {
+    color:  rgba(190, 178, 48, 1); /* Text alb */
+    font-family: 'Kelly Slab', cursive;
+    font-size: 24px;
+    line-height: 1.6;
+    padding: 20px;
+    margin-left: 40px; 
+    margin-bottom: 155px;
+    
+  }
+  .bottom-image {
+    width: 100%;
+    height: 354px; /* Asigură-te că imaginea își păstrează proporțiile */
+    display: block;
+    margin-top: 20px; /* Ajustează această valoare pentru a da un pic de spațiu între secțiune și imagine */
+  }
+ 
+
+
+ /* Titlu portofoliu */
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 10px; 
+}
+
+.portfolio-header h1 {
+    font-size: 48px;
+    color: rgba(190, 178, 48, 1);
+}
+
+/* Secțiunea de portofoliu */
+.portfolio-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px; /* <-- limitează lățimea */
+    margin: 0 auto; /* <-- centrează secțiunea */
+    padding: 20px;
+}
+
+/* Itemele individuale */
+.portfolio-item {
+    width: 210px;
+    height: 263px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.portfolio-item p {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.portfolio-item:hover {
+    background-color: rgba(190, 178, 48, 1);
+    border-color: rgba(190, 178, 48, 1);
+}
+
+.portfolio-item:hover p {
+    color: #fff;
+}
+.line {
+    width: 66.66%; /* 2/3 din lățimea ecranului */
+    height: 4px; /* grosimea liniei */
+    background-color: rgba(190, 178, 48, 1); /* Culoarea ca la bara de meniu */
+    margin-top: 40px; /* distanța față de ultimul rând de containere */
+    margin-left: auto; /* aliniază la dreapta */
+    margin-right: -180px; /* marginea dreaptă */
+}
+.portofoliu-containere {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 300px;
+    height: 200px;
+    background-color: #f5f5f5;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .container:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+  }
+  
+  .galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .galerie img {
+    width: 100%;
+    height: 250px; /* fixăm înălțimea */
+    object-fit: cover; /* taie imaginea frumos ca să umple spațiul */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+  
+  .galerie img:hover {
+    transform: scale(1.05);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Kelly Slab', cursive;
+    color: #ffffff; /* sau o culoare care să iasă în evidență */
+    margin-bottom: 100px;
+    padding-top: 100px; 
+  }
+ /* Stilizare pentru containerul cu artiști */
+ .artist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.artist-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; 
+    margin-left: 244px;/* Setăm o lățime fixă pentru profil */
+}
+
+.image-container img {
+    width: 422px;
+    height: 722px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.details h2 {
+    font-size: 40px;
+    margin-left: 217px;
+
+}
+
+.description {
+    font-size: 24px;
+    text-align: left;
+    margin-left: 66px;
+}
+
+.experience {
+    font-size: 36px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 185px;
+}
+
+.stars {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-left: 239px;
+}
+
+.star {
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.star:hover {
+    color: gold;
+}
+.schedule-button {
+    display: block;
+    margin-top: 98px; /* Distanța de la stele */
+    width: 296px;
+    height: 49px;
+    background-color: transparent;
+    border: 2px solid rgba(190, 178, 48, 1); /* Culoarea bordurii (poți să o schimbi cu culoarea barei de meniu, dacă este diferită) */
+    border-radius: 10px;
+    font-size: 16px;
+    color: rgba(190, 178, 48, 1);
+    text-align: center;
+    line-height: 49px; /* Centrarea textului pe verticală */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left:208px;
+}
+
+.schedule-button:hover {
+    background-color: #807a06;
+    color: #fff;
+}
+
+/* Linie de separare între containere */
+.separator-line {
+    width: calc(100% - 248px); /* 124px din stânga + 124px din dreapta */
+    height: 4px;
+    background-color: rgba(190, 178, 48, 1); /* Culoarea barei de meniu */
+    margin: 20px auto; /* Distanța de sus și de jos între containere și linie */
+}
+
+
+.custom-footer {
+    background-color: rgba(190, 178, 48, 1); /* culoarea din imagine */
+    color: black;
+    padding: 40px 20px;
+    font-family:  'Kelly Slab', cursive;
+    position: relative;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    position: absolute;
+    left: 124px;
+    top: 30px;
+  }
+  
+  .footer-logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    object-fit: contain;
+  }
+  
+  .footer-nav {
+    margin: 20px 0;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .footer-info {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .address p {
+    margin: 0;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 40px;
+    background-color: black;
+  }
+  
+  .footer-copy {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .footer-icons {
+    position: absolute;
+    top: 30px;
+    right: 124px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-icons img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
